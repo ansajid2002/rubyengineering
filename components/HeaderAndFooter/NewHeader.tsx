@@ -8,6 +8,7 @@ import MenuMobile from "./MenuMobile";
 import { Modal, Button } from 'antd';
 
 import { Linkedin, Facebook, Twitter, Youtube } from 'lucide-react';
+import { BACKEND_URL } from "@/app/page";
 
 
 const SocialIcons = () => {
@@ -89,7 +90,7 @@ const NewHeader = () => {
 
       
       const response = await fetch(
-        `${process.env.BLOG_BACKEND}/wp-json/getAllCentreFacilitiesTypes/v1`
+        `${BACKEND_URL}/wp-json/custom/v1/getProductTypeSubCategories`
       );
 
       
@@ -98,7 +99,8 @@ const NewHeader = () => {
       }
       
       const result = await response.json();
-
+    
+      
       setSubMenuData(result);
     } catch (error) {
       console.error("Error fetching categories:", error);
@@ -144,7 +146,7 @@ const NewHeader = () => {
 
   return (
     <header
-      className={`px-5 lg:px-20 h-[8svh] bg-gray-100  flex items-center justify-between z-50 sticky top-0 transition-transform duration-300 ${show}`}
+      className={`px-5 lg:px-20 h-[8svh] bg-gray-100  flex items-center justify-between  z-50 sticky top-0 transition-transform duration-300 ${show}`}
     >
       
 

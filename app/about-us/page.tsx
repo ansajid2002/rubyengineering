@@ -1,3 +1,4 @@
+import Ourteam from '@/components/About/Ourteam'
 import Whychooseus from '@/components/About/Whychooseus'
 import Banner from '@/components/Banner'
 import { ArrowRight } from 'lucide-react'
@@ -13,9 +14,9 @@ const Page = () => {
       bgImg="https://img.freepik.com/premium-photo/industrial-equipment-production-food-mixer-liquids-stainless-steel-big-shaker_89816-2390.jpg?ga=GA1.1.1856381827.1724408266&semt=ais_hybrid"
       page="About"
       />
-    <img 
+    <img    
       src="/paper2.png" 
-      className='absolute left-1/2 transform -translate-x-1/2  -translate-y-48  z-10' 
+      className='absolute left-1/2 transform -translate-x-1/2  -translate-y-[200px]  z-10' 
       />
   </div>
 
@@ -29,12 +30,13 @@ const Page = () => {
       <h2 className='font-[antonio] text-4xl'>WELCOME TO RUBY ENGINEERING</h2>
       <p className='text-xl my-4'>We Have 15+ Years Of Experience in Help Succeed Service!</p>
       <p className='text-base text-gray-500'>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-      <p className='bg-primary px-4 py-2 mt- text-lg text-white font-bold w-40 flex items-center gap-2'>Contact Us <ArrowRight size={20} color="white" /></p>
+      <p className='bg-primary px-4 py-2 mt-4 text-lg text-white font-bold w-40 flex items-center gap-2'>Contact Us <ArrowRight size={20} color="white" /></p>
     </div>
     <img src="/about1.png" className='-mt-20 w-1/2 ' />
   </div>
   {/* //////////////SECTION 1 //////////////// */}
     <Whychooseus />
+    <Ourteam/>
       </main>
   )
 }

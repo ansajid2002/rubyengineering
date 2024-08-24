@@ -78,8 +78,8 @@ const Footer = async () => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-5 px-3 lg:px-10 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="space-y-3">
-              <p className="font-bold text-2xl">Quick Links</p>
+            <div className="space-y-2">
+              <p className="font-bold text-xl">Quick Links</p>
               <div className="w-20 h-0.5 bg-primary rounded-full"></div>
               <div className="flex flex-col mt-4 space-y-2 text-base">
                 <Link className=" flex items-center hover:text-primary gap-1 hover:ml-1 duration-200" href={"/"}>
@@ -106,8 +106,8 @@ const Footer = async () => {
                   ))} */}
               </div>
             </div>
-            <div className="space-y-3">
-              <p className="font-bold text-2xl">Popular Categories</p>
+            <div className="space-y-2">
+              <p className="font-bold text-xl">Popular Categories</p>
               <div className="w-20 h-0.5 bg-primary rounded-full"></div>
               <div className="flex flex-col mt-4 space-y-2 text-base">
                 <Link className="hover:text-primary" href={"/privacy-policy"}>
@@ -125,10 +125,10 @@ const Footer = async () => {
 
               </div>
             </div>
-            <div className="space-y-3">
-              <p className="font-bold text-2xl">Contact Info</p>
+            <div className="space-y-2">
+              <p className="font-bold text-xl">Contact Info</p>
               <div className="w-20 h-0.5 bg-primary rounded-full"></div>
-              <div className="space-y-3 mt-4 text-sm">
+              <div className="space-y-2 mt-4 text-sm">
                 <div className="flex  items-center gap-2">
                   <div>
                     <MapPin  size={20} color="#fb7701" />

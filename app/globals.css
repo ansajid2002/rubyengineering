@@ -130,3 +130,43 @@ body {
   from { transform: translateY(0); opacity: 1; }
   to { transform: translateY(200px); opacity: 0; }
 }
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to top, #fb7701, #fb7601b9 );
+  transition: width 0.5s ease-out;
+  pointer-events: none;
+}
+
+.post-container:hover .overlay {
+  width: 100%;
+}
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Initially scale to 0 */
+  color: white; /* Ensure text color is white */
+  text-align: center;
+  padding: 2px;
+  width: 85%; /* Set width to 85% of the container */
+  max-width: 90%; /* Optional: Add a max-width to prevent overflow on very large screens */
+  border-radius: 5px;
+  font-size: 17px;
+  transition: transform 0.5s ease-out; /* Transition scaling */
+}
+
+.post-container:hover .description {
+  transform: translate(-50%, -50%) scale(1); /* Scale to full size on hover */
+}
+.description p,
+.description strong {
+  color: white !important;
+  margin: 0;
+}
