@@ -10,7 +10,7 @@ const Menu = ({
   categoriesData, // This should contain your 8 categories, each with 5 subcategories
 }) => {
   const path = usePathname();
-
+  
   const menuItems = [
     { id: 1, name: "Home", url: "/" },
     { id: 2, name: "About Us", url: "/about-us" },
@@ -43,10 +43,10 @@ const Menu = ({
                     {subMenuData?.slice(0,8)?.map((category, index) => (
                       <div key={index} className="flex  flex-col">
                         <Link
-                          href={`/category/${category.slug}`}
+                          href={`/subcategories/${category.parent_slug}`}
                           onClick={() => setShowCatMenu(false)}
                         >
-                          <h3 className="text-base  font-semibold text-black hover:text-primary mb-2">
+                          <h3 className="text-base  hover:scale-105 duration-200 hover:ml-1 font-semibold text-black hover:text-primary mb-2">
                             {category.parent_name}
                           </h3>
                         </Link>
@@ -54,11 +54,11 @@ const Menu = ({
                           {category.subcategories?.slice(0,4)?.map((subItem, subIndex) => (
                             <li key={subIndex}>
                               <Link
-                                href={`/category/${subItem.slug}`}
+                                href={`/products/${subItem.slug}`}
                                 onClick={() => setShowCatMenu(false)}
                               >
-                                <p className="text-sm flex items-center  gap-x-2 text-gray-600 hover:text-primary mb-1 transition-all ease-in-out">
-                                  <ArrowRight size={14}/> {subItem.name}
+                                <p className="text-sm flex items-center hover:ml-2 duration-200  gap-x-2 text-gray-600 hover:text-primary mb-1 transition-all ease-in-out">
+                                 {subItem.name}
                                 </p>
                               </Link>
                             </li>

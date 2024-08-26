@@ -12,7 +12,7 @@ const Ourcategories = ({categories}) => {
         <h2 className="text-4xl font-semibold text-center font-[antonio] mb-8">Our Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {categories.map((category) => (
-            <Link href={`/subcategory/${category.slug}`}
+            <Link href={`/subcategories/${category.slug}`}
               key={category.term_id}
               className="flex flex-col items-center bg-white  border rounded-lg shadow-lg"
             >

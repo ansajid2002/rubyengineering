@@ -7,7 +7,7 @@ import { MdCall } from "react-icons/md";
 const FloatingButton = () => {
   return (
     <div className="group z-50 drop-shadow-xl fixed bottom-5 right-5 p-2  flex items-end justify-end w-24 h-24 ">
-      <div className="text-white shadow-xl flex items-center cursor-pointer justify-center p-3 rounded-full bg-gradient-to-r from-primary to-[#12BFE9] z-50 absolute  ">
+      <div className="text-white shadow-xl flex items-center cursor-pointer justify-center p-3 rounded-full bg-gradient-to-r from-primary to-secondary z-50 absolute  ">
         <MessageCircle color="white" size={25} />
       </div>
       <a

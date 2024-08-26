@@ -144,7 +144,7 @@ const Footer = async () => {
                 <div className="flex items-center gap-2">
                   <MailIcon size={20} color="#fb7701" />
                   <a href="mailto:Info@vcare.centre">
-                    Info@vcare.centre
+                    Info@ruby.engineering
                   </a>
                 </div>
               </div>

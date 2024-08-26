@@ -26,7 +26,13 @@ body {
   position: relative;
   height: 100%;
 }
+.swiper-button-next::after {
+  display: none;
+}
 
+.swiper-button-prev::after {
+  display: none;
+}
 body {
   background: #fff;
   font-family:
