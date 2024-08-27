@@ -138,7 +138,7 @@ const ContactForm = () => {
                                 </form>
                             </div>
                         </div>
-                        <div class="w-full   p-3   bg-blue-200 sm:p-12 lg:w-[40%]">
+                        <div class="w-[90%] md:w-full mx-auto my-12 md:my-2    bg-blue-200 sm:p-12 lg:w-[40%]">
                             <div class="mb-12 max-w-[570px] lg:mb-0">
                                 <span class="block  text-xl font-semibold text-primary">
                                     Find Us
@@ -155,18 +155,18 @@ const ContactForm = () => {
                                 <div className="space-y-4 mt-8 text-sm">
                 <div className="flex  items-center gap-2">
                   <div>
-                    <MapPin  size={25} color="#fb7701" />
+                    <MapPin  size={25} color="#00008b" />
                   </div>
                   <h2 className="text-base">
                   Gr floor Bhagyashree apartment Gupte chowk kalyan west,  Maharashtra 421301.
                   </h2>
                 </div>
                 <div className="flex items-center gap-2">
-                  <PhoneCall size={25} color="#fb7701" />
+                  <PhoneCall size={25} color="#00008b" />
                   <a href="tel:+919152709243" className="text-base">+91 97685 88108</a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MailIcon size={25} color="#fb7701" />
+                  <MailIcon size={25} color="#00008b" />
                   <a href="mailto:Info@vcare.centre" className="text-base">
                     Info@vrubyengineering
                   </a>

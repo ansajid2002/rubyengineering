@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
 const MenuMobile = ({
@@ -11,38 +11,20 @@ const MenuMobile = ({
   showContactMenu,
   setShowContactMenu,
 }) => {
-  const data = [
-    {
-      id: 8,
-      name: "Home",
-      url: "/",
-    },
-    {
-      id: 1,
-      name: "Facilities",
-      subMenu: true,
-    },
-    {
-      id: 2,
-      name: "About Us",
-      url: "/about-us",
-    },
-    {
-      id: 3,
-      name: "Contact Us",
-      contact: true,
-    },
-    {
-      id: 5,
-      name: "Careers",
-      url: "/careers",
-    },
+  const menuItems = [
+    { id: 1, name: "Home", url: "/" },
+    { id: 2, name: "About Us", url: "/about-us" },
+    { id: 3, name: "Categories", subMenu: true },
+    { id: 4, name: "Products", url: "/products" },
+    { id: 5, name: "Contact Us", url: "/contact-us" },
   ];
+  
+
 
   return (
     <>
-      <ul className="flex flex-col lg:hidden font-normal text-lg absolute top-[12svh] left-0 w-full h-[calc(100svh-80px)] bg-white border-t text-black">
-        {data.map((item) => {
+      <ul className="flex flex-col lg:hidden font-normal text-lg absolute top-[8svh] h-[100vh] left-0 w-full bg-white border-t text-black z-50">
+        {menuItems.map((item) => {
           return (
             <React.Fragment key={item.id}>
               {item?.subMenu ? (
@@ -56,49 +38,22 @@ const MenuMobile = ({
                   </div>
 
                   {showCatMenu && (
-                    <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
-                      {subMenuData?.map((subItem, index) => {
+                    <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4 max-h-[50vh] overflow-y-scroll">
+                      {subMenuData?.map((category, index) => {
                         return (
                           <Link
-                            key={index}
-                            href={
-                              subItem.slug === "poly-clinic"
-                                ? `/doctor`
-                                : `/category/${subItem?.slug}`
-                            }
-                          >
+  key={index}
+  href={`/subcategories/${category.parent_slug}`}
+  onClick={() => {
+    setShowCatMenu(!showCatMenu);
+    setMobileMenu(false); // Close the mobile menu on click
+  }}
+>
                             <li
                               onClick={() => setMobileMenu(false)}
-                              className="h-12 flex justify-between items-center px-10 hover:bg-gray-100 rounded-md transition-all ease-in-out"
+                              className="h-12 flex justify-between items-center px-10 hover:bg-gray-50 border-b border-white rounded-md transition-all ease-in-out text-sm my-1"
                             >
-                              {subItem?.name}
-                            </li>
-                          </Link>
-                        );
-                      })}
-                    </ul>
-                  )}
-                </li>
-              ) : item?.contact ? (
-                <li
-                  className="cursor-pointer py-4 px-5 border-b flex flex-col relative"
-                  onClick={() => setShowContactMenu(!showContactMenu)}
-                >
-                  <div className="flex justify-between items-center">
-                    {item.name}
-                    <BsChevronDown size={14} />
-                  </div>
-
-                  {showContactMenu && (
-                    <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
-                      {contactData?.map((contactItem, index) => {
-                        return (
-                          <Link key={index}  href={`/contact-us?page=${contactItem}`}>
-                            <li
-                              onClick={() => setMobileMenu(false)}
-                              className="h-12 flex justify-between items-center px-10 hover:bg-gray-100 rounded-md transition-all ease-in-out"
-                            >
-                              {contactItem?.name}
+                              {category?.parent_name}
                             </li>
                           </Link>
                         );
@@ -108,7 +63,9 @@ const MenuMobile = ({
                 </li>
               ) : (
                 <li className="py-4 px-5 border-b">
-                  <Link href={item?.url} onClick={() => setMobileMenu(false)}>
+                  <Link href={item?.url} onClick={() => {
+setMobileMenu(false)}
+                  } >
                     {item.name}
                   </Link>
                 </li>

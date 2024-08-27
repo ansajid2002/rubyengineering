@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const Productcard = ({ product, isfeatured = false }) => {
-  console.log(product, "product_product_product");
+
 
   return (
     <div key={product.term_id} className="flex flex-col items-center bg-white border rounded-lg shadow-lg relative group overflow-hidden">

@@ -1,6 +1,7 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { GoTriangleDown } from "react-icons/go";
 
 const Menu = ({
@@ -10,7 +11,7 @@ const Menu = ({
   categoriesData, // This should contain your 8 categories, each with 5 subcategories
 }) => {
   const path = usePathname();
-  
+  const [hoveredCategory, setHoveredCategory] = useState(null);
   const menuItems = [
     { id: 1, name: "Home", url: "/" },
     { id: 2, name: "About Us", url: "/about-us" },
@@ -18,9 +19,11 @@ const Menu = ({
     { id: 4, name: "Products", url: "/products" },
     { id: 5, name: "Contact Us", url: "/contact-us" },
   ];
+  
+  
 
   return (
-    <ul className="hidden lg:flex items-center gap-8 z-20 text-black">
+    <ul className="hidden md:flex items-center gap-8 z-20 text-black">
       {menuItems.map((item) => {
         const isActive = path === item.url;
 
@@ -38,36 +41,60 @@ const Menu = ({
                   className="transition-all ease-in-out duration-500 group-hover:-rotate-180"
                 />
 
-                {showCatMenu && (
-                  <div className="absolute capitalize  top-0 mt-5 left-2 min-w-[800px] bg-white px-2 py-4 shadow-lg border-t-2 border-primary grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {subMenuData?.slice(0,8)?.map((category, index) => (
-                      <div key={index} className="flex  flex-col">
-                        <Link
-                          href={`/subcategories/${category.parent_slug}`}
-                          onClick={() => setShowCatMenu(false)}
-                        >
-                          <h3 className="text-base  hover:scale-105 duration-200 hover:ml-1 font-semibold text-black hover:text-primary mb-2">
-                            {category.parent_name}
-                          </h3>
-                        </Link>
-                        <ul>
-                          {category.subcategories?.slice(0,4)?.map((subItem, subIndex) => (
-                            <li key={subIndex}>
-                              <Link
-                                href={`/products/${subItem.slug}`}
-                                onClick={() => setShowCatMenu(false)}
-                              >
-                                <p className="text-sm flex items-center hover:ml-2 duration-200  gap-x-2 text-gray-600 hover:text-primary mb-1 transition-all ease-in-out">
-                                 {subItem.name}
-                                </p>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                )}
+{showCatMenu && (
+        <div className={` ${hoveredCategory?.parent_name ? "min-w-[600px]" : "min-w-[300px]"} absolute top-0 mt-5 left-2  bg-white px-2 py-4 shadow-lg border-t-2 border-primary flex`}>
+          
+          {/* Left Side - Categories */}
+          <div className={`  ${hoveredCategory?.parent_name ? "w-1/2  "  : "w-full"}  h-[70vh] overflow-y-scroll   pr-4`}>
+            {subMenuData?.map((category, index) => (
+              <div
+                key={index}
+                onMouseEnter={() => setHoveredCategory(category)}
+                // onMouseLeave={() => setHoveredCategory(null)}
+                className="capitalize mb-4"
+              >
+                <Link className="flex items-center gap-2"
+                  href={`/subcategories/${category.parent_slug}`}
+                  onClick={() => setShowCatMenu(false)}
+                >
+                  <img
+                src={category.parent_meta.product_type_image[0]}
+                alt={category.name}
+                className=" h-8 w-8 object-cover"
+              />
+                  <div
+      className={`text-base  font-[400] text-black hover:text-primary ${hoveredCategory?.parent_slug === category.parent_slug &&  "border-b-2 border-[#00008b] text-primary" } `}
+      dangerouslySetInnerHTML={{ __html: category.parent_name }}
+    ></div>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Side - Subcategories */}
+          <div className={ `${hoveredCategory?.parent_name ? "w-1/2 pl-4 border-l" : "" }  `}>
+            {hoveredCategory && (
+              <div>
+                <h4 className="text-lg font-semibold mb-3 text-primary">{hoveredCategory.parent_name}</h4>
+                <ul>
+                  {hoveredCategory.subcategories?.map((subItem, subIndex) => (
+                    <li key={subIndex} className="mb-2">
+                      <Link
+                        href={`/products/${subItem.slug}`}
+                        onClick={() => setShowCatMenu(false)}
+                      >
+                        <p className="text-sm flex items-center hover:ml-2 duration-200 gap-x-2 text-gray-600 hover:text-primary transition-all ease-in-out">
+                          <ArrowRight color="gray" size={18}/> {subItem.name}
+                        </p>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
               </li>
             ) : (
               <li

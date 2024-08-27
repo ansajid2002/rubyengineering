@@ -32,20 +32,23 @@ const data = [
 
 const Whychooseus = () => {
   return (
-    <div className='bg-gray-100 px-20 py-10 flex gap-4 gap-x-12 items-center'>
-   <div className='w-[40%] relative'>
+    <div className='bg-gray-100 px-4 md:px-20 py-10'>
+    
+      <p className="text-base text-primary font-bold text-center">Our speciality</p>
+      <h2 className="text-4xl font-[antonio] text-center mb-8">Why Choose us</h2>
+    <div className=' md:flex gap-4 gap-x-12 items-center'>
+   <div className='md:w-[40%] relative'>
   <img src="/about/grinding.png" alt="Background" className="w-full h-auto object-cover" />
   <div className="absolute inset-0 bg-gray-100 opacity-90"></div>
 </div>
-  <div className="flex flex-col justify-center w-[60%] ">
-    <p className="text-base text-primary font-bold text-center">Our speciality</p>
-    <h2 className="text-4xl font-[antonio] text-center mb-8">Why Choose us</h2>
+  <div className="flex flex-col justify-center md:w-[60%] ">
+
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 duration-300">
       {data.map((item) => (
-       <div
-       key={item.id}
-       className="flex flex-col p-4 items-start border-2 border-white shadow-xl bg-gradient-to-br from-white to-gray-200 transition-shadow  hover:shadow-inner duration-300"
-     >
+        <div
+        key={item.id}
+        className="flex flex-col p-4 items-start border-2 border-white shadow-xl bg-gradient-to-br from-white to-gray-200 transition-shadow  hover:shadow-inner duration-300"
+        >
           <img src="/about/1.png" alt={item.title} className="w-24 h-24 rounded-full" />
           <h3 className="text-xl font-bold font-[antonio] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
   {item.title}
@@ -55,6 +58,7 @@ const Whychooseus = () => {
       ))}
     </div>
   </div>
+       </div>
 </div>
 
 

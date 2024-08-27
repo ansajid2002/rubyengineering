@@ -30,7 +30,7 @@ const Announcement = () => {
       <div className="flex items-center gap-10">
         <div className="flex items-start gap-2">
          <div className="p-2.5 bg-white rounded-full" >
-          <PhoneCall color="orange" size={25}/>
+          <PhoneCall color="#00008b" size={25}/>
           </div> 
           <div className="text-white">
             <p className="text-white text-lg">PHONE NO.</p>
@@ -39,7 +39,7 @@ const Announcement = () => {
         </div>
         <div className="flex items-start gap-2">
          <div className="p-2.5 bg-white rounded-full" >
-          <Mail color="orange" size={25}/>
+          <Mail color="#00008b" size={25}/>
           </div> 
           <div className="text-white">
             <p className="text-white text-lg">EMAIL ADDRESS</p>

@@ -23,7 +23,7 @@ const Footer = async () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-100 text-gray-800 border-t">
+    <footer className="bg-gray-100 text-gray-800 border-t mt-20">
       <div className=" px-4 pt-10 pb-5 mx-auto sm:px-6 lg:px-16 space-y-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
@@ -45,7 +45,7 @@ const Footer = async () => {
         className="p-2 m-1.5 bg-white  shadow-lg hover:shadow-xl transition-shadow duration-300"
         aria-label="LinkedIn"
       >
-        <Linkedin color="#FF6600" size={18} />
+        <Linkedin color="#00008b" size={18} />
       </a>
       <a
         href="https://www.facebook.com"
@@ -54,7 +54,7 @@ const Footer = async () => {
         className="p-2 m-1.5 bg-white  shadow-lg hover:shadow-xl transition-shadow duration-300"
         aria-label="Facebook"
       >
-        <Facebook color="#FF6600" size={18} />
+        <Facebook color="#00008b" size={18} />
       </a>
       <a
         href="https://twitter.com"
@@ -63,7 +63,7 @@ const Footer = async () => {
         className="p-2 m-1.5 bg-white  shadow-lg hover:shadow-xl transition-shadow duration-300"
         aria-label="Twitter"
       >
-        <Twitter color="#FF6600" size={18} />
+        <Twitter color="#00008b" size={18} />
       </a>
       <a
         href="https://www.youtube.com"
@@ -72,7 +72,7 @@ const Footer = async () => {
         className="p-2 m-1.5 bg-white  shadow-lg hover:shadow-xl transition-shadow duration-300"
         aria-label="YouTube"
       >
-        <Youtube color="#FF6600" size={18} />
+        <Youtube color="#00008b" size={18} />
       </a>
     </div>
             </div>
@@ -88,6 +88,11 @@ const Footer = async () => {
                 <Link className=" flex items-center hover:text-primary gap-1 hover:ml-1 duration-200"  href={"/about-us"}>
                    <ArrowRight size={16}/><span className="hover:text-primary">About Us</span>  
                 </Link>
+                <Link className=" flex items-center hover:text-primary gap-1 hover:ml-1 duration-200"  href={"/products"}>
+                   <ArrowRight size={16}/><span className="hover:text-primary">Products</span>  
+                </Link>
+
+
                 <Link className="flex items-center hover:text-primary gap-1 hover:ml-1 duration-200" href={"/contact-us"}>
                   <ArrowRight className="" size={16}/><span className="hover:text-primary">Contact Us </span>  
                 </Link>
@@ -110,17 +115,17 @@ const Footer = async () => {
               <p className="font-bold text-xl">Popular Categories</p>
               <div className="w-20 h-0.5 bg-primary rounded-full"></div>
               <div className="flex flex-col mt-4 space-y-2 text-base">
-                <Link className="hover:text-primary" href={"/privacy-policy"}>
-                  Pulveriser
+                <Link className="hover:text-primary" href={"/subcategories/air-lock"}>
+                  Air Lock
                 </Link>
-                <Link className="hover:text-primary" href={"/terms-and-conditions"}>
-                  Grinder
+                <Link className="hover:text-primary" href={"/subcategories/bearings"}>
+                  Bearings
                 </Link>
-                <Link className="hover:text-primary" href={"/refund-and-cancellation"}>
-                  Equipments
+                <Link className="hover:text-primary" href={"/subcategories/dust-collectors"}>
+                  Dust Collectors
                 </Link>
-                <Link className="hover:text-primary" href={"/refund-and-cancellation"}>
-                  Equipments
+                <Link className="hover:text-primary" href={"/subcategories/hydrolic-system"}>
+                  Hydrolic Systems
                 </Link>
 
               </div>
@@ -131,18 +136,18 @@ const Footer = async () => {
               <div className="space-y-2 mt-4 text-sm">
                 <div className="flex  items-center gap-2">
                   <div>
-                    <MapPin  size={20} color="#fb7701" />
+                    <MapPin  size={20} color="#00008b" />
                   </div>
                   <h2>
                   Gr floor Bhagyashree apartment Gupte chowk kalyan west,  Maharashtra 421301.
                   </h2>
                 </div>
                 <div className="flex items-center gap-2">
-                  <PhoneCall size={20} color="#fb7701" />
+                  <PhoneCall size={20} color="#00008b" />
                   <a href="tel:+919152709243">+91 97685 88108</a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MailIcon size={20} color="#fb7701" />
+                  <MailIcon size={20} color="#00008b" />
                   <a href="mailto:Info@vcare.centre">
                     Info@ruby.engineering
                   </a>

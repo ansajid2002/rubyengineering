@@ -20,7 +20,6 @@ const Page = () => {
         throw new Error('Failed to fetch subcategories');
       }
       const data = await response.json();
-      console.log(data,"subcategorieees ddata");
       
       setSubcategories(data);
     } catch (error) {
@@ -40,21 +39,13 @@ const Page = () => {
   return (
     <div>
 
-<div className='relative'>
     <Banner
       title={`${cat_slug}`}
       bgImg="https://img.freepik.com/premium-photo/industrial-equipment-production-food-mixer-liquids-stainless-steel-big-shaker_89816-2390.jpg?ga=GA1.1.1856381827.1724408266&semt=ais_hybrid"
       page={`${cat_slug}`}
       />
-    <img    
-      src="/paper2.png" 
-      className='absolute left-1/2 transform -translate-x-1/2  -translate-y-[200px]  z-10' 
-      />
-  </div>
-
   
-    
-    <div className=" mx-4 lg:mx-14 xl:mx-20 my-12" >
+    <div className=" mx-4 lg:mx-14 xl:mx-20 mb-12" >
 
     <div className="container mx-auto my-4">
  
@@ -77,7 +68,7 @@ const Page = () => {
         __html:post?.description ,
       }}
     ></div>
-    <p className="z-30  flex items-center justify-center text-2xl font-semibold description mt-16">{`Read More `}<span className="ml-1"> <ChevronRight strokeWidth={5} color="white" className="text-white" size={16} /></span> </p>
+    <p className="z-30  flex items-center justify-center text-2xl font-semibold description mt-16">{`View Products `}<span className="ml-1"> <ChevronRight strokeWidth={3} color="white" className="text-white" size={16} /></span> </p>
           </div>
           {/* <h2 className="text-2xl font-[400] text-center mt-1 mb-3">{post.title}</h2> */}
           <div

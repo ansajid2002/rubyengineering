@@ -7,38 +7,39 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
 import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/effect-cards';
+
 const testimonials = [
-    {
-      id: 1,
-      image: '/images/testimonial1.jpg', // Replace with actual image path
-      name: 'Emily Johnson',
-      text: 'H-Konnect provided an unforgettable stay! From the warm welcome at check-in to the luxurious room amenities, every detail was meticulously attended to.',
-    },
-    {
-      id: 2,
-      image: '/images/testimonial2.jpg', // Replace with actual image path
-      name: 'Michael Smith',
-      text: 'An exceptional experience at H-Konnect. The modern and elegantly designed rooms were a perfect retreat after a day of exploring the city.',
-    },
-    {
-      id: 3,
-      image: '/images/testimonial3.jpg', // Replace with actual image path
-      name: 'Sophia Martinez',
-      text: 'Our stay at H-Konnect was nothing short of amazing. The luxurious spa and wellness facilities added an extra layer of relaxation to our trip. ',
-    },
-    {
-      id: 4,
-      image: '/images/testimonial4.jpg', // Replace with actual image path
-      name: 'David Lee',
-      text: 'H-Konnect exceeded all our expectations. The hotel’s prime location provided easy access to major attractions while offering a serene and tranquil environment.',
-    },
-    {
-      id: 5,
-      image: '/images/testimonial5.jpg', // Replace with actual image path
-      name: 'Olivia Brown',
-      text: 'A fantastic experience at H-Konnect. From the moment we arrived, we were treated like VIPs. The room was beautifully decorated, and the amenities were top-notch.',
-    },
-  ];
+  {
+    id: 1,
+    image: '/images/testimonial1.jpg', // Replace with actual image path
+    name: 'Ravi Kumar',
+    text: 'Ruby Engineering has revolutionized our production process with their top-notch masala grinding machines. The efficiency and precision are unmatched.',
+  },
+  {
+    id: 2,
+    image: '/images/testimonial1.jpg', // Replace with actual image path
+    name: 'Priya Sharma',
+    text: 'We’ve been using Ruby Engineering’s pulverisers for over a year, and the durability and performance are outstanding. Highly recommend for any industrial needs.',
+  },
+  {
+    id: 3,
+    image: '/images/testimonial1.jpg', // Replace with actual image path
+    name: 'Anil Verma',
+    text: 'The wheat flour machines from Ruby Engineering have significantly improved our milling operations. The quality of the flour and the efficiency of the machines are superb.',
+  },
+  {
+    id: 4,
+    image: '/images/testimonial1.jpg', // Replace with actual image path
+    name: 'Sunita Desai',
+    text: 'Our experience with Ruby Engineering has been fantastic. Their machines are reliable, and the customer service is excellent. We couldn’t be happier with our purchase.',
+  },
+  {
+    id: 5,
+    image: '/images/testimonial1.jpg', // Replace with actual image path
+    name: 'Rajesh Gupta',
+    text: 'Ruby Engineering’s machines have brought a new level of efficiency to our factory. The build quality and attention to detail are impressive.',
+  },
+];
 
 import { EffectCards } from 'swiper/modules';
 import { FaQuoteLeft } from 'react-icons/fa';
@@ -48,15 +49,16 @@ const Testimonials = () => {
 
   return (
     <div className=' bg-[url("/testimonial.png")]'>
-    <h2 className='text-2xl text-center lg:text-4xl font-bold mt-10 pt-10 '>
-      Happy <span className='text-primary'>Clients</span>
+    <h2 className='text-3xl font-[antonio] text-center lg:text-5xl font-medium mt-10 pt-10 '>
+      Testimonials
     </h2>
-    <div className='lg:flex max-w-[1300px] mx-auto items-center justify-center py-6 sm:py-8'>
-    <div className='text-lg text-center sm:text-2xl lg:text-3xl lg:w-[50%] font-bold mb-6 mx-auto'>
+    <div className="w-40 mx-auto mt-4  mb-8 h-0.5 bg-primary rounded-full"></div>
+    <div className='lg:flex max-w-[1300px] mx-auto items-center justify-center pb-6 pt-2 sm:py-8'>
+    <div className='text-xl text-center sm:text-2xl lg:text-3xl lg:w-[50%] font-bold mb-6 mx-auto'>
   <div className='flex justify-center mb-2'>
     <FaQuoteLeft className='text-primary' />
   </div>
-  <h2>
+  <h2 className=''>
     Explore the Voices of Those Who Have <br /><span className='text-primary'>Experienced Our Services</span>
   </h2>
 </div>

@@ -9,9 +9,10 @@ import React, { useEffect, useState } from 'react'
 const Page = () => {
   const { product_slug } = useParams();
   const [products, setProducts] = useState(null);
+
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log(product_slug,"product_slug");
   
   const fetchproductsbySubcat = async (slug) => {
     try {
@@ -20,7 +21,7 @@ const Page = () => {
         throw new Error('Failed to fetch subcategories');
       }
       const data = await response.json();
-      console.log(data,"subcategorieees ddata");
+   
       
       setProducts(data);
     } catch (error) {
@@ -39,25 +40,20 @@ const Page = () => {
 
   return (
     <div>
-<div className='relative'>
+
     <Banner
       title={product_slug}
       bgImg="https://img.freepik.com/premium-photo/industrial-equipment-production-food-mixer-liquids-stainless-steel-big-shaker_89816-2390.jpg?ga=GA1.1.1856381827.1724408266&semt=ais_hybrid"
-      page="Details"
+      page="Products"
       />
-    <img    
-      src="/paper2.png" 
-      className='absolute left-1/2 transform -translate-x-1/2  -translate-y-[200px]  z-10' 
-      />
-  </div>
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-10 mt-20'>
+   
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-4 md:mx-10 mb-10'>
       {
         products ?  products?.map((product) => {
           return (
-            <div className="flex flex-col items-center bg-white border rounded-lg shadow-lg relative group overflow-hidden"
-            >
+           
                  <Productcard product={product} />
-              </div>
+           
           )
         }) 
         : (
