@@ -17,10 +17,10 @@ const Announcement = () => {
 
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
-    <div className="hidden md:flex h-[12svh] px-16 bg-gradient-to-r from-primary to-secondary items-center justify-between">
+    <div className="hidden md:flex h-[12svh] px-16 bg-gradient-to-r from-[#c6d8ff] to-secondary items-center justify-between">
      <Link href={"/"} className="flex">
         <img
-          src="/logodemo.webp"
+          src="/mainlogo.png"
           className="w-[180px] md:w-[250px]"
           alt="vcare"
           onClick={() => setMobileMenu(false)}

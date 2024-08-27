@@ -155,9 +155,9 @@ const NewHeader = () => {
       )}
 
       <div className="flex items-center gap-2 justify-between w-full md:w-auto text-black">
-        <div className="hidden md:flex gap-3 rounded-full justify-center md:justify-between items-center cursor-pointer relative">
+        {/* <div className="hidden md:flex gap-3 rounded-full justify-center md:justify-between items-center cursor-pointer relative">
           <SocialIcons />
-        </div>
+        </div> */}
         <Link href={"/"} className="block md:hidden">
           <img
             src="/logodemo.webp"

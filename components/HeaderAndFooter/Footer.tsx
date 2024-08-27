@@ -28,54 +28,15 @@ const Footer = async () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <img
-              src="/logodemo.webp"
-              className="mr-5 w-[150px] md:w-[240px]"
+              src="/mainlogo.png"
+              className="mr-5 w-[150px] md:w-[280px]"
               alt="Footer Logo"
             />
             {/* <h2 className="text-4xl font-title">vcare</h2> */}
-            <p className="mt-4 text-base font-light">
+            <p className="mt-1 text-base font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <div className="pt-4">
-            <div className="flex  space-x-4">
-      <a
-        href="https://www.linkedin.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 m-1.5 bg-white  shadow-lg hover:shadow-xl transition-shadow duration-300"
-        aria-label="LinkedIn"
-      >
-        <Linkedin color="#00008b" size={18} />
-      </a>
-      <a
-        href="https://www.facebook.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 m-1.5 bg-white  shadow-lg hover:shadow-xl transition-shadow duration-300"
-        aria-label="Facebook"
-      >
-        <Facebook color="#00008b" size={18} />
-      </a>
-      <a
-        href="https://twitter.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 m-1.5 bg-white  shadow-lg hover:shadow-xl transition-shadow duration-300"
-        aria-label="Twitter"
-      >
-        <Twitter color="#00008b" size={18} />
-      </a>
-      <a
-        href="https://www.youtube.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 m-1.5 bg-white  shadow-lg hover:shadow-xl transition-shadow duration-300"
-        aria-label="YouTube"
-      >
-        <Youtube color="#00008b" size={18} />
-      </a>
-    </div>
-            </div>
+            
           </div>
           <div className="grid grid-cols-1 gap-5 px-3 lg:px-10 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-2">
