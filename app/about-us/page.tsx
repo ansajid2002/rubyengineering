@@ -25,7 +25,7 @@ const Page = () => {
       <h2 className='font-[antonio] font-semibold text-3xl sm:text-6xl sm:leading-[70px]'>WELCOME TO <br/><span className='text-primary font-[antonio]'>RUBY ENGINEERING</span></h2>
       <img src="/about1.png" className='md:-mt-20 w-full md:w-1/2 block sm:hidden ' />
       <p className='text-xl md:my-4 mt-0'>We Have 15+ Years Of Experience in Help Succeed Service!</p>
-      <p className='text-base text-gray-500'>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+      <p className='text-base text-gray-500'>At Ruby Engineering, we are committed to excellence in manufacturing top-of-the-line wheat flour machines, masala grinding machines, and pulverizers. With a focus on precision and durability, our machines are designed to enhance productivity and ensure consistent, high-quality output for all your milling and grinding needs. Trust us to deliver reliable solutions that drive your business forward.</p>
       <p className='bg-primary px-4 py-2 mt-4 text-lg text-white font-bold w-40 flex items-center gap-2'>Contact Us <ArrowRight size={20} color="white" /></p>
     </div>
     <img src="/about1.png" className='md:-mt-20 w-full md:w-1/2 sm:block hidden ' />

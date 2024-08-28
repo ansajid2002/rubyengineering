@@ -22,10 +22,10 @@ const Announcement = () => {
         <img
           src="/mainlogo.png"
           className="w-[180px] md:w-[250px]"
-          alt="vcare"
+          alt="ruby"
           onClick={() => setMobileMenu(false)}
         />
-        {/* <h1 className="font-[500] text-[30px] font-greatvibes">vcare</h1> */}
+
       </Link>
       <div className="flex items-center gap-10">
         <div className="flex items-start gap-2">
@@ -34,7 +34,7 @@ const Announcement = () => {
           </div> 
           <div className="text-white">
             <p className="text-white text-lg">PHONE NO.</p>
-            <p className="text-white text-base -mt-1.5">+91 1234567890</p>
+            <p className="text-white text-base -mt-1.5">+91 9892582134</p>
           </div>
         </div>
         <div className="flex items-start gap-2">
@@ -43,7 +43,7 @@ const Announcement = () => {
           </div> 
           <div className="text-white">
             <p className="text-white text-lg">EMAIL ADDRESS</p>
-            <p className="text-white text-base -mt-1.5">support@ruby.com</p>
+            <p className="text-white text-base -mt-1.5">ruby.e.works@gmail.com</p>
           </div>
         </div>
         

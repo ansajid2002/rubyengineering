@@ -167,8 +167,8 @@ const ContactForm = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <MailIcon size={25} color="#00008b" />
-                  <a href="mailto:Info@vcare.centre" className="text-base">
-                    Info@vrubyengineering
+                  <a href="mailto:ruby.e.works@gmail.com" className="text-base">
+                  ruby.e.works@gmail.com
                   </a>
                 </div>
               </div>

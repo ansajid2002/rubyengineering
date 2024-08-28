@@ -45,7 +45,10 @@ const Menu = ({
         <div className={` ${hoveredCategory?.parent_name ? "min-w-[600px]" : "min-w-[300px]"} absolute top-0 mt-5 left-2  bg-white px-2 py-4 shadow-lg border-t-2 border-primary flex`}>
           
           {/* Left Side - Categories */}
-          <div className={`  ${hoveredCategory?.parent_name ? "w-1/2  "  : "w-full"}  h-[70vh] overflow-y-scroll   pr-4`}>
+          <div  style={{
+    scrollbarWidth: 'thin', /* For Firefox */
+    scrollbarColor: '#888 #f1f1f1', /* For Firefox: thumb color, track color */
+  }} className={`  ${hoveredCategory?.parent_name ? "w-1/2  "  : "w-full"}  h-[70vh] overflow-y-scroll   pr-4`}>
             {subMenuData?.map((category, index) => (
               <div
                 key={index}

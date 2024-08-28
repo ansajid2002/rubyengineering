@@ -62,7 +62,7 @@ const Testimonials = () => {
     Explore the Voices of Those Who Have <br /><span className='text-primary'>Experienced Our Services</span>
   </h2>
 </div>
-      <div className="w-full max-w-[400px] overflow-hidden sm:overflow-visible sm:w-[50%] mx-auto my-12">
+      <div className="w-full ml-0  max-w-[400px] overflow-hidden sm:overflow-visible sm:w-[50%] mx-auto my-12">
         <Swiper
           effect={'cards'}
           grabCursor={true}

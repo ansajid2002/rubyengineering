@@ -6,48 +6,23 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import MenuMobile from "./MenuMobile";
 import { Modal, Button } from 'antd';
-import { Linkedin, Facebook, Twitter, Youtube } from 'lucide-react';
+import { Linkedin, Facebook, Twitter, Youtube, PhoneCall, Phone } from 'lucide-react';
 import { BACKEND_URL } from "@/app/page";
+import { BsTelephone } from "react-icons/bs";
 
 const SocialIcons = () => {
   return (
     <div className="flex space-x-4">
-      <a
-        href="https://www.linkedin.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 m-1.5 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
-        aria-label="LinkedIn"
-      >
-        <Linkedin color="#00008b" size={18} />
-      </a>
-      <a
-        href="https://www.facebook.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 m-1.5 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
-        aria-label="Facebook"
-      >
-        <Facebook color="#00008b" size={18} />
-      </a>
-      <a
-        href="https://twitter.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 m-1.5 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
-        aria-label="Twitter"
-      >
-        <Twitter color="#00008b" size={18} />
-      </a>
-      <a
-        href="https://www.youtube.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="p-2 m-1.5 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
-        aria-label="YouTube"
-      >
-        <Youtube color="#00008b" size={18} />
-      </a>
+      <div className="flex items-center gap-2">
+                  <Phone size={20} color="#00008b" />
+                  <a href="tel:022-23088552">022-23088552</a>
+                </div>
+    <div className="h-6 w-0.5 bg-black"></div>
+                <div className="flex items-center gap-2">
+                  <Phone size={20} color="#00008b" />
+                  <a href="tel:+917400482134">74004 82134</a>
+                </div>
+
     </div>
   );
 };
@@ -59,21 +34,7 @@ const NewHeader = () => {
   const [subMenuData, setSubMenuData] = useState(null);
   const [showSearch, setShowSearch] = useState(false);
   const divRef = useRef(null);
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [donationAmount, setDonationAmount] = useState(0);
-
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
-
+  
   const handleCloseDiv = (event) => {
     if (divRef.current && !divRef.current.contains(event.target)) {
       setShowSearch(false);
@@ -155,14 +116,14 @@ const NewHeader = () => {
       )}
 
       <div className="flex items-center gap-2 justify-between w-full md:w-auto text-black">
-        {/* <div className="hidden md:flex gap-3 rounded-full justify-center md:justify-between items-center cursor-pointer relative">
+        <div className="hidden md:flex gap-3 rounded-full justify-center md:justify-between items-center cursor-pointer relative">
           <SocialIcons />
-        </div> */}
+        </div>
         <Link href={"/"} className="block md:hidden">
           <img
             src="/logodemo.webp"
             className="w-[180px] md:w-[250px]"
-            alt="vcare"
+            alt="ruby"
             onClick={() => setMobileMenu(false)}
           />
         </Link>

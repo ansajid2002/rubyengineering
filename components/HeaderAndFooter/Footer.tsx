@@ -32,9 +32,8 @@ const Footer = async () => {
               className="mr-5 w-[150px] md:w-[280px]"
               alt="Footer Logo"
             />
-            {/* <h2 className="text-4xl font-title">vcare</h2> */}
             <p className="mt-1 text-base font-light">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            At Ruby Engineering, we excel in developing cutting-edge machinery that enhances efficiency and performance in food processing. 
             </p>
             
           </div>
@@ -94,23 +93,29 @@ const Footer = async () => {
             <div className="space-y-2">
               <p className="font-bold text-xl">Contact Info</p>
               <div className="w-20 h-0.5 bg-primary rounded-full"></div>
-              <div className="space-y-2 mt-4 text-sm">
+              <div className="space-y-3 mt-4 text-sm">
                 <div className="flex  items-center gap-2">
                   <div>
                     <MapPin  size={20} color="#00008b" />
                   </div>
                   <h2>
-                  Gr floor Bhagyashree apartment Gupte chowk kalyan west,  Maharashtra 421301.
+                  Ruby Engineering Works<br/>
+                  175 Memni building dimtimkar Road Nagpada near Darul Muadda Tower MUMBAI 400008
                   </h2>
                 </div>
                 <div className="flex items-center gap-2">
                   <PhoneCall size={20} color="#00008b" />
-                  <a href="tel:+919152709243">+91 97685 88108</a>
+                  <a href="tel:+919820891821">+91 98208 91821</a>
                 </div>
                 <div className="flex items-center gap-2">
+                  <PhoneCall size={20} color="#00008b" />
+                  <a href="tel:+919594082134">+91 95940 82134</a>
+                </div>
+
+                <div className="flex items-center gap-2">
                   <MailIcon size={20} color="#00008b" />
-                  <a href="mailto:Info@vcare.centre">
-                    Info@ruby.engineering
+                  <a href="mailto:ruby.e.works@gmail.com">
+                  ruby.e.works@gmail.com
                   </a>
                 </div>
               </div>
