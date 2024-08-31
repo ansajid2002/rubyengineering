@@ -11,33 +11,27 @@ import 'swiper/css/effect-cards';
 const testimonials = [
   {
     id: 1,
-    image: '/images/testimonial1.jpg', // Replace with actual image path
+    image: '/users/user4.webp', // Replace with actual image path
     name: 'Ravi Kumar',
-    text: 'Ruby Engineering has revolutionized our production process with their top-notch masala grinding machines. The efficiency and precision are unmatched.',
-  },
-  {
-    id: 2,
-    image: '/images/testimonial1.jpg', // Replace with actual image path
-    name: 'Priya Sharma',
-    text: 'We’ve been using Ruby Engineering’s pulverisers for over a year, and the durability and performance are outstanding. Highly recommend for any industrial needs.',
+    text: 'Ruby Engineering Works has revolutionized our production process with their top-notch masala grinding machines. The efficiency and precision are unmatched.',
   },
   {
     id: 3,
-    image: '/images/testimonial1.jpg', // Replace with actual image path
+    image: '/users/user2.webp', // Replace with actual image path
     name: 'Anil Verma',
-    text: 'The wheat flour machines from Ruby Engineering have significantly improved our milling operations. The quality of the flour and the efficiency of the machines are superb.',
+    text: 'The wheat flour machines from Ruby Engineering works have significantly improved our milling operations. The quality of the flour and the efficiency of the machines are superb.',
   },
   {
     id: 4,
-    image: '/images/testimonial1.jpg', // Replace with actual image path
+    image: '/users/user1.webp', // Replace with actual image path
     name: 'Sunita Desai',
-    text: 'Our experience with Ruby Engineering has been fantastic. Their machines are reliable, and the customer service is excellent. We couldn’t be happier with our purchase.',
+    text: 'Our experience with Ruby Engineering works has been fantastic. Their machines are reliable, and the customer service is excellent. We couldn’t be happier with our purchase.',
   },
   {
     id: 5,
-    image: '/images/testimonial1.jpg', // Replace with actual image path
+    image: '/users/user5.webp',  // Replace with actual image path
     name: 'Rajesh Gupta',
-    text: 'Ruby Engineering’s machines have brought a new level of efficiency to our factory. The build quality and attention to detail are impressive.',
+    text: 'Ruby Engineering works machines have brought a new level of efficiency to our factory. The build quality and attention to detail are impressive.',
   },
 ];
 
@@ -76,7 +70,7 @@ const Testimonials = () => {
             <SwiperSlide key={testimonial.id}>
               <div className='border overflow-hidden rounded-md h-[300px] sm:h-[400px] w-[300px] sm:w-[400px] shadow-2xl p-4 flex flex-col items-center mx-auto'>
                 <div className='rounded-full overflow-hidden h-[40%] w-[40%] sm:w-[40%] sm:h-[40%]'>
-                  <img src="/about/1.png" alt={testimonial.name} className='w-full h-full object-cover' />
+                  <img src={testimonial.image} alt={testimonial.name} className='w-full h-full object-cover' />
                 </div>
                 <h2 className='text-2xl font-bold mt-3 text-center'>{testimonial.name}</h2>
                 <p className='text-base text-gray-700 mt-2 text-center'>" {testimonial.text} "</p>

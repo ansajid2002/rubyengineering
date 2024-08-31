@@ -12,8 +12,8 @@ import FloatingButton from "@/components/FloatingButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ruby Engineering",
-  description: "Ruby Engineering",
+  title: "Ruby Engineering Works",
+  description: "Ruby Engineering Works",
 };
 
 export default function RootLayout({

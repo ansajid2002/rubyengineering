@@ -5,21 +5,20 @@ import { sendmail } from "./sendmail";
 export const sendContactForm = async (
   name,
   email,
-  phoneCode,
   phone,
   message="",
   doctor=""
 ) => {
   try {
     await sendmail({
-      to: "ansajid2002@gmail.com",
+      to: "ruby.e.works@gmail.com",
       name: name,
-      subject: "Contact Form Submission From HospitalityKonnect Website",
+      subject: "Contact Form Submission From Ruby Engineering Works",
       body: `
         <div>
           <h3>Name: ${name}</h3>
           <h3>Email: ${email}</h3>
-          <h3>Phone: ${phoneCode} ${phone}</h3>
+          <h3>Phone: ${phone}</h3>
           ${message ? `<h3>Message: ${message}</h3>` : ''}
           ${doctor ? `<h3>Message: ${doctor}</h3>` : ''}
         </div>

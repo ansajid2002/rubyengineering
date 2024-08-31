@@ -47,26 +47,27 @@ const Page = () => {
       page="Products"
       />
    
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-4 md:mx-10 mb-10'>
-      {
-        products ?  products?.map((product) => {
-          return (
-           
-                 <Productcard product={product} />
-           
-          )
-        }) 
-        : (
-          [...Array(6)].map((_, index) => (
-            <div key={index} className="p-2 box-border">
-              <div className="relative aspect-w-1 h-[200px] md:h-[220px] xl:h-[300px] overflow-hidden">
-                <div className="skeleton w-full h-full bg-gray-200"></div> {/* Skeleton placeholder */}
-              </div>
-            </div>
-          ))
-        )
-      }
-    </div>
+   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-4 md:mx-10 mb-10'>
+  {products ? (
+    products.length > 0 ? (
+      products.map((product) => (
+        <Productcard key={product.id} product={product} />
+      ))
+    ) : (
+      <div className="col-span-full text-center text-gray-500 text-xl">
+        No products found
+      </div>
+    )
+  ) : (
+    [...Array(6)].map((_, index) => (
+      <div key={index} className="p-2 box-border">
+        <div className="relative aspect-w-1 h-[200px] md:h-[220px] xl:h-[300px] overflow-hidden">
+          <div className="skeleton w-full h-full bg-gray-200"></div> {/* Skeleton placeholder */}
+        </div>
+      </div>
+    ))
+  )}
+</div>
     </div>
 
     )

@@ -13,12 +13,12 @@ import { BsTelephone } from "react-icons/bs";
 const SocialIcons = () => {
   return (
     <div className="flex space-x-4">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 font-bold">
                   <Phone size={20} color="#00008b" />
                   <a href="tel:022-23088552">022-23088552</a>
                 </div>
     <div className="h-6 w-0.5 bg-black"></div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center font-bold gap-2">
                   <Phone size={20} color="#00008b" />
                   <a href="tel:+917400482134">74004 82134</a>
                 </div>

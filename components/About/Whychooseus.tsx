@@ -4,26 +4,28 @@ const data = [
   {
       id: 1,
       title: "Precision Engineering and Durability",
-      description: "At Ruby Engineering, we manufacture high-performance pulverizers and grinders with precision engineering and durable materials.",
-      img: ""
+      description: "At Ruby Engineering Works, we manufacture high-performance pulverizers and grinders with precision engineering and durable materials.",
+      img: "/users/1.png"
   },
   {
       id: 2,
       title: "Advanced Technology for Superior Efficiency",
       description: "Our equipment features energy-efficient motors and optimized mechanisms for higher productivity and lower operational costs.",
-      img: ""
+      img: "/users/2.png"
+
   },
   {
       id: 3,
       title: "Tailored Solutions for Your Unique Needs",
       description: "We offer customized solutions to meet your specific needs, ensuring our machinery aligns with your business goals.",
-      img: ""
+      img: "/users/3.png"
+
   },
   {
       id: 4,
       title: "Comprehensive After-Sales Support",
       description: "We provide after-sales support, including installation, training, and maintenance to keep your equipment in top condition.",
-      img: ""
+      img: "/users/4.png"
   },
  
 ];
@@ -49,8 +51,10 @@ const Whychooseus = () => {
         key={item.id}
         className="flex flex-col p-4 items-start border-2 border-white shadow-xl bg-gradient-to-br from-white to-gray-200 transition-shadow  hover:shadow-inner duration-300"
         >
-          <img src="/about/1.png" alt={item.title} className="w-24 h-24 rounded-full" />
-          <h3 className="text-xl font-bold font-[antonio] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <div className='p-2'>
+          <img src={item.img} alt={item.title} className="w-24 h-24 rounded-full" />
+            </div>
+          <h3 className="text-xl font-bold mt-2 font-[antonio] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
   {item.title}
 </h3>
           <p className="text-base text-gray-500 mt-4">{item.description}</p>

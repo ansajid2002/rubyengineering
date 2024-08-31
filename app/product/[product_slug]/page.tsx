@@ -157,7 +157,7 @@ const Page = () => {
 
 
 
-<div className=" text-xl md:text-3xl font-[500] mt-10 border-b-2 w-28 pb-1 border-primary mb-4 ">description</div>
+<div className=" text-xl md:text-3xl font-[500] mt-10 border-b-2 w-28 pb-1 border-primary mb-4 ">Description</div>
                     <div
                       className="text-justify text-base md:text-base text-[#3f3f3f]"
                       dangerouslySetInnerHTML={{

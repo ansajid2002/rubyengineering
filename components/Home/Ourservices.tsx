@@ -45,7 +45,7 @@ const data = [
 const Ourservices = () => {
     return (
         <div className=' px-4 md:px-20 bg-gray-100 py-14'>
-            <p className="text-base text-primary font-bold text-center">Why Ruby Engineering</p>
+            <p className="text-base text-primary font-bold text-center">Why Ruby Engineering Works</p>
             <h2 className=" text-3xl md:text-5xl font-[antonio] text-center mb-8">We Have Best Service for Succeed Quality</h2>
             <div className="w-60 mx-auto -mt-4  mb-3 h-0.5 bg-primary rounded-full"></div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-8">

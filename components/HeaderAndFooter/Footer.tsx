@@ -28,12 +28,12 @@ const Footer = async () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <img
-              src="/mainlogo.png"
+              src="/mainlogo2.png"
               className="mr-5 w-[150px] md:w-[280px]"
               alt="Footer Logo"
             />
             <p className="mt-1 text-base font-light">
-            At Ruby Engineering, we excel in developing cutting-edge machinery that enhances efficiency and performance in food processing. 
+            At Ruby Engineering Works, we excel in developing cutting-edge machinery that enhances efficiency and performance in food processing. 
             </p>
             
           </div>
@@ -126,16 +126,10 @@ const Footer = async () => {
         <p className="mt- text-base text-center">
           © {currentYear} All Rights Reserved{" "}
           <a href="/" className="text-primary" target="_blank">
-            Ruby Engineering
+            Ruby Engineering Works
           </a>{" "}
-          | Crafted by{" "}
-          <a
-            href="https://sagartech.co.in/"
-            className="hover:text-primary"
-            target="_blank"
-          >
-            Sagar Tech - Technical Solutions
-          </a>
+       
+          
         </p>
       </div>
     </footer>
