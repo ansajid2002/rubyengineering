@@ -71,8 +71,8 @@ const Homebanner = () => {
             <div className="text-center">
               <h2 className= " text-[22px] sm:text-[40px] md:text-[65px] text-white font-bold font-[antonio]">{banner.title}</h2>
               <p className="mt-2 text-white text-[15px] sm:text-xl md:text-2xl mx-0 sm:mx-16 md:mx-32 my-4">{banner.description}</p>
-              <div className="bg-gradient-to-r from-primary to-secondary hover:to-primary duration-200 w-32 md:w-40 mt-3 md:mt-6 mx-auto px-3 md:px-5 py-1 md:py-2">
-                <Link href="/contact-us" className=" text-lg md:text-xl text-white group font-medium flex items-center">Contact us <span className='-mb-0.5 ml-1 group-hover:ml-1.5 duration-150'><ChevronRight size={20} color="#fff" /></span></Link>
+              <div className="bg-gradient-to-r from-primary to-secondary hover:to-primary duration-200 w-[116px] md:w-40 mt-3 md:mt-6 mx-auto px-2 md:px-5 py-1.5 md:py-2">
+                <Link href="/contact-us" className=" text-base md:text-xl text-white group font-medium flex items-center">Contact us <span className='-mb-0.5 ml-1 group-hover:ml-1.5 duration-150'><ChevronRight size={20} color="#fff" /></span></Link>
               </div>
             </div>
           </div>

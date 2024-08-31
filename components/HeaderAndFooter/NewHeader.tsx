@@ -91,6 +91,8 @@ const NewHeader = () => {
     };
   }, []);
 
+  
+
   return (
     <header
       className={`${headerClass} px-5 lg:px-20 h-[8svh] flex items-center justify-between transition-transform duration-300`}
@@ -121,7 +123,7 @@ const NewHeader = () => {
         </div>
         <Link href={"/"} className="block md:hidden">
           <img
-            src="/logodemo.webp"
+            src="/mainlogo2.png"
             className="w-[180px] md:w-[250px]"
             alt="ruby"
             onClick={() => setMobileMenu(false)}

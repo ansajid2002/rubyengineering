@@ -18,7 +18,6 @@ const MenuMobile = ({
     { id: 4, name: "Products", url: "/products" },
     { id: 5, name: "Contact Us", url: "/contact-us" },
   ];
-  
 
 
   return (
@@ -42,13 +41,13 @@ const MenuMobile = ({
                       {subMenuData?.map((category, index) => {
                         return (
                           <Link
-  key={index}
-  href={`/subcategories/${category.parent_slug}`}
-  onClick={() => {
-    setShowCatMenu(!showCatMenu);
-    setMobileMenu(false); // Close the mobile menu on click
-  }}
->
+                            key={index}
+                            href={`/subcategories/${category.parent_slug}`}
+                            onClick={() => {
+                              setShowCatMenu(!showCatMenu);
+                              setMobileMenu(false); // Close the mobile menu on click
+                            }}
+                          >
                             <li
                               onClick={() => setMobileMenu(false)}
                               className="h-12 flex justify-between items-center px-10 hover:bg-gray-50 border-b border-white rounded-md transition-all ease-in-out text-sm my-1"
@@ -64,7 +63,8 @@ const MenuMobile = ({
               ) : (
                 <li className="py-4 px-5 border-b">
                   <Link href={item?.url} onClick={() => {
-setMobileMenu(false)}
+                    setMobileMenu(false)
+                  }
                   } >
                     {item.name}
                   </Link>
