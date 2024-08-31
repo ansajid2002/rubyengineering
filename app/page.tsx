@@ -6,7 +6,8 @@ import Ourservices from "@/components/Home/Ourservices";
 import Testimonials from "@/components/Home/Testimonials";
 import Image from "next/image";
 
-export const BACKEND_URL = process.env.BACKEND_URL 
+// export const BACKEND_URL = process.env.BACKEND_URL 
+export const BACKEND_URL="https://rubyeng.demo-web.live"
 
 const getAllcategories = async () => {
   try {
